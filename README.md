@@ -84,6 +84,7 @@ Developed by: Y SHAVEDHA
 RegisterNumber: 212221230095
 ### ENCODER
 ### Program
+```
 module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
 output a,b,c;
 input d0,d1,d2,d3,d4,d5,d6,d7;
@@ -91,6 +92,7 @@ or(a,d4,d5,d6,d7);
 or(b,d2,d3,d6,d7);
 or(c,d1,d3,d5,d7);
 endmodule
+```
 ### RTL Logic
 ![image](https://user-images.githubusercontent.com/93427376/171608130-975f447d-057d-4d37-9bdc-8d5028c2ef78.png)
 ### Timing Diagram
@@ -100,6 +102,7 @@ endmodule
 
 ### DECODER
 ### Program
+```
 module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
 input a,b,c;
 output d0,d1,d2,d3,d4,d5,d6,d7;
@@ -112,6 +115,7 @@ assign d5 = (a&~b&c);
 assign d6 = (a&b&~c);
 assign d7 = (a&b&c);
 endmodule
+```
 ### RTL Logic
 ![image](https://user-images.githubusercontent.com/93427376/171608546-b1388ad0-f8f3-43bf-9115-98ec85ca6666.png)
 ### Timing Diagram
